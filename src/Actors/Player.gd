@@ -18,6 +18,12 @@ func _physics_process(delta: float) -> void:
 	
 	var direction: = get_direction()
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
+	if _velocity.x > 0:
+		$AnimatedSprite.play("walk_right")
+	elif _velocity.x < 0:
+		$AnimatedSprite.play("walk_left")
+	elif _velocity.x == 0:
+		$AnimatedSprite.play("stand")
 	_velocity = move_and_slide(_velocity, FLOOR_NORMAL)
 
 	
