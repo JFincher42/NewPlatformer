@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Platformer (tutorial)"
+config/name="New Platformer"
 run/main_scene="res://src/Screens/MainScreen.tscn"
 config/icon="res://icon.png"
 
